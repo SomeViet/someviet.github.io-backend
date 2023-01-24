@@ -19,6 +19,10 @@ app.listen(6969, () => {
     console.log("Server is being listened to");
 });
 
+app.get("/", (_, res) => {
+    res.status(200).send("The back-end is awake");
+});
+
 const myEmail = nodemailer.createTransport({
     service: SERVICE,
     auth: {
